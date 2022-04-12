@@ -1,11 +1,12 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider } from "@mui/material"
 
-import App from "./App";
-import React from "react";
-import ReactDOM from "react-dom";
-import { peepTheme } from "./theme";
+import App from "./App"
+import React from "react"
+import { createRoot } from "react-dom/client"
+import { peepTheme } from "./theme"
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root")!)
+root.render(
   <React.StrictMode>
     <ThemeProvider theme={peepTheme}>
       <CssBaseline />
@@ -13,5 +14,4 @@ ReactDOM.render(
       <App />
     </ThemeProvider>
   </React.StrictMode>,
-  document.getElementById("root")
-);
+)
